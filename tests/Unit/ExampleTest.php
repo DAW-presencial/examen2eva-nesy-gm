@@ -15,4 +15,11 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
     }
+    
+    public function configure (){
+    $this->afterMaking(($user){
+    });
+    
+    $this->afterCreating(($user){
+    });
 }
