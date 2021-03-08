@@ -14,5 +14,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        $user=User::factory()->has(Tutor::factory()->count(3))->create();
+dump($user->toArray());
+
     }
 }

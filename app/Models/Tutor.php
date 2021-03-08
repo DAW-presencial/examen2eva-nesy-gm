@@ -12,7 +12,7 @@ class Tutor extends Model
         'empresa',
         'documento',
         'nombre_tutor_emp',
-        'nombre_tutor_emp',
+        'apellido1_tutor_emp',
         'apellido2_tutor_emp',
         'pais_documento',
         'provincia',

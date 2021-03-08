@@ -28,7 +28,7 @@ class CreateTutorsTable extends Migration
             $table->string('email')->nullable();
             $table->timestamps();
 
-           
+
         });
 
 

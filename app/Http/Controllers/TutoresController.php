@@ -1,29 +1,23 @@
-<?php
+<?phpmate
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class TutoresController extends Controller
-{
+class TutoresController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function create() {
+        return view('tutores');
     }
 
     /**
@@ -32,9 +26,24 @@ class TutoresController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(DatosTutorRequest $request) {
+        $i = request();
+        // Inserción usando el modelo Tutor
+        $tutor = Tutor::create([
+                    'empresa' => $i['empresa'],
+                    'documento' => $i['documento'],
+                    'nombre_tutor_emp' => $i['nombre_tutor_emp'],
+                    'apellido1_tutor_emp' => $i['apellido1_tutor_emp'],
+                    'apellido2_tutor_emp' => $i['apellido2_tutor_emp'],
+                    'pais_documento' => $i['pais_documento'],
+                    'provincia' => $i['provincia'],
+                    'municipio' => $i['municipio'],
+                    'status' => $i['status'],
+                    'telefono' => $i['telefono'],
+                    'email' => $i['email']
+                        //'id_emp' => $id_emp,
+        ]);
+        $tutor->save();
     }
 
     /**
@@ -43,8 +52,7 @@ class TutoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -54,8 +62,7 @@ class TutoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         //
     }
 
@@ -66,8 +73,7 @@ class TutoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         //
     }
 
@@ -77,8 +83,8 @@ class TutoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         //
     }
+
 }

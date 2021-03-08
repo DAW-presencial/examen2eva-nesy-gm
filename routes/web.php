@@ -22,8 +22,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-//Route::get('/','TutoresController@create');
-//
-//
-//Route::resource('/tutores', TutoresController::class)->parameters(['tutores'=>'tutor'])->names(['create'=>'tutores.crear']);
+Route::get('/','TutoresController@create');
+Route::get('/',[TutoresController::Class, 'index' ]);
+
+
+Route::resource('/tutores', TutoresController::class)->parameters(['tutores'=>'tutor'])->names(['create'=>'tutores.crear']);
 

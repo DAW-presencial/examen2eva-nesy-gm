@@ -5,8 +5,8 @@ namespace Database\Factories;
 use App\Models\Tutor;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class TutorFactory extends Factory
-{
+class TutorFactory extends Factory {
+
     /**
      * The name of the factory's corresponding model.
      *
@@ -19,10 +19,12 @@ class TutorFactory extends Factory
      *
      * @return array
      */
-    public function definition()
-    {
+    public function definition() {
         return [
             //
+            'nombre'=>$this->faker->sentence,
+            'user_id'=>User::factory()
         ];
     }
+
 }
