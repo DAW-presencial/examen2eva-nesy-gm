@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-
+use App\Http\Controllers\TutoresController;
+use App\Http\Controllers\TutorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,17 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+/*
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
-})->name('dashboard');
+})->name('dashboard'); */
 
-Route::get('/','TutoresController@create');
+//Route::get('/','TutoresController@create');
 Route::get('/',[TutoresController::Class, 'index' ]);
 
-
+/*
 Route::resource('/tutores', TutoresController::class)->parameters(['tutores'=>'tutor'])->names(['create'=>'tutores.crear']);
-
+*/
