@@ -106,7 +106,6 @@
                                 <option value="pasaporte" @if (old('tipo_identificador') === 'pasaporte') selected @endif>Pasaporte</option>
                                 <option value="sin_espefificar" @if (old('tipo_identificador') === 'sin_espefificar') selected @endif>Sin especificar</option>
                             </select>
-                            {{-- <input type="text" class="form-control" id="documento" name="documento" value="{{old('documento')}}" /> --}}
                             <p class="text-warning small">{{$errors->first('tipo_identificador')}}</p>
                     </div>
 

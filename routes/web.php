@@ -24,8 +24,14 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard'); */
 
 //Route::get('/','TutoresController@create');
-Route::get('/',[TutoresController::Class, 'index' ]);
+//Route::get('/',[TutoresController::Class, 'index' ]);
 
-/*
-Route::resource('/tutores', TutoresController::class)->parameters(['tutores'=>'tutor'])->names(['create'=>'tutores.crear']);
-*/
+//RUTAS CREADAS
+App::setlocale('es');
+Route::view('/', 'cen_docentes');
+Route::view('/',[CenDocente::Class, 'index' ]);
+Route::get('/',[CenDocente::Class, 'index' ]);
+Route::get('/','CenDocente@create');
+Route::redirect('/', '/cen_docentes/create');
+Route::resource('/cen_docentes', CenDocente::class)->parameters(['cen_docentes'=>'cen_docente'])->names(['create'=>'cen_docentes.crear']);
+

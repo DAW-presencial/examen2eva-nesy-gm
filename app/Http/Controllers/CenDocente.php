@@ -18,7 +18,7 @@ class CenDocente extends Controller
     public function index()
     {
         //
-     return view ('cen_docente');
+     return view ('cen_docentes');
  }
 
     /**
@@ -29,7 +29,7 @@ class CenDocente extends Controller
     public function create()
     {
         //
-        return view ('cen_docente');
+        return view ('cen_docentes');
     }
 
     /**
