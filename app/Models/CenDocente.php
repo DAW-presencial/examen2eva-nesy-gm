@@ -12,8 +12,10 @@ class CenDocente extends Model
 	protected $fillable = [
 		'denominacion',
 		'codigo',
+		'cif',
 		'titularidad',
 		'dir_postal',
+		'cp',
 		'nombre_director',
 		'apellido1_director',
 		'apellido2_director',

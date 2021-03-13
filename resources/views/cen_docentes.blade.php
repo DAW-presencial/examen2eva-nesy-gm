@@ -30,7 +30,7 @@
         </div>
 
         <!-- formulario -->
-        <form method="post" action="{{ route('cen_docente.store') }}">
+        <form method="post" action="{{ route('cen_docentes.store') }}">
             @csrf
             <div class="form-group">
                 <div class="row">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="col-4 form-group">
                         <label for="codigo">{{__('Codigo')}}</label>
-                        <input type="text" class="form-control" id="cif" name="cif" value="{{old('codigo')}}" required/>
+                        <input type="text" class="form-control" id="codigo" name="codigo" value="{{old('codigo')}}" required/>
                         <p class="text-warning small">{{$errors->first('codigo')}}</p>
                     </div>
                     <div class="col-4 form-group">

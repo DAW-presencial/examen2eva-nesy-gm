@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 
 
-class CenDocente extends Controller
+class CenDocenteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -44,7 +44,7 @@ class CenDocente extends Controller
         $request->validate([
           'denominacion'=>'required|min:2',
             'codigo'=>'required|min:2',
-              'cif'=>'required|min:2',
+            'cif'=>'required|min:2',
             'nombre_director'=>'required|min:2|max:16',
             'apellido1_director'=>'required|min:2',
             'identificador'=> 'required|unique:cen_docentes',
@@ -64,7 +64,7 @@ class CenDocente extends Controller
             'identificador' => $request->get('identificador'),
             'tipo_identificador' => $request->get('tipo_identificador'),
         ]);
-        $tutor->save();
+        $cen_docente->save();
         return redirect('/')->with('success', 'Centro docente creado');
 
 
