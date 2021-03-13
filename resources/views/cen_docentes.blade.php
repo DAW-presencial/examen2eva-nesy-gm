@@ -95,7 +95,7 @@
                 <div class="row">
                     <div class="col-4 form-group">
                             <label for="identificador">{{__('Identificador')}}</label>
-                            <input type="text" class="form-control" id="num_doc" name="num_doc" value="{{old('identificador')}}" required />
+                            <input type="text" class="form-control" id="identificador" name="identificador" value="{{old('identificador')}}" required />
                             <p class="text-warning small">{{$errors->first('identificador')}}</p>
                     </div>
                     <div class="col-4 form-group">
