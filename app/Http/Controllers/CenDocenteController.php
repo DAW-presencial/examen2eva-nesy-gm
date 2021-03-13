@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Controllers\Controller;
 use App\Models\CenDocente;
 use Illuminate\Http\Request;
 
@@ -45,9 +44,11 @@ class CenDocenteController extends Controller
           'denominacion'=>'required|min:2',
             'codigo'=>'required|min:2',
             'cif'=>'required|min:2',
+            'titularidad' => 'required|in:publica,privada,concertada',
             'nombre_director'=>'required|min:2|max:16',
             'apellido1_director'=>'required|min:2',
             'identificador'=> 'required|unique:cen_docentes',
+            'tipo_identificador' => 'required|in:dni,nie,pasaporte,sin especificar'
 
         ]);
 
