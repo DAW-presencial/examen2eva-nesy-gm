@@ -41,13 +41,16 @@ class CenDocenteController extends Controller
     {
         //establece las validaciones de campos dentro de los inputs del formulario
         $request->validate([
-          'denominacion'=>'required|min:2',
-            'codigo'=>'required|min:2',
-            'cif'=>'required|min:2',
+          'denominacion'=>'required|string|min:2|max:12',
+            'codigo'=>'required|string|min:2|max:12',
+            'cif'=>'required|string|min:2|max:12',
             'titularidad' => 'required|in:publica,privada,concertada',
-            'nombre_director'=>'required|min:2|max:16',
-            'apellido1_director'=>'required|min:2',
-            'identificador'=> 'required|unique:cen_docentes',
+            'dir_postal' => 'nullable|string|max:100',
+            'cp' => 'nullable|digits:5',
+            'nombre_director'=>'required|string|min:2|max:15',
+            'apellido1_director'=>'required|string|min:2|max:15',
+            'apellido2_director' => 'nullable|string|max:15',
+            'identificador'=> 'required|string|max:15|unique:cen_docentes',
             'tipo_identificador' => 'required|in:dni,nie,pasaporte,sin especificar'
 
         ]);
