@@ -100,7 +100,7 @@
                     </div>
                     <div class="col-4 form-group">
                             <label for="tipo_identificador">{{__('Tipo identificador')}}</label>
-                            <select class="form-control" name='identificador' id="tipo_identificador">
+                            <select class="form-control" name='tipo_identificador' id="tipo_identificador">
                                 <option value="dni" @if (old('tipo_identificador') === 'dni') selected @endif>Dni</option>
                                 <option value="nie" @if (old('tipo_identificador') === 'nie') selected @endif>Nie</option>
                                 <option value="pasaporte" @if (old('tipo_identificador') === 'pasaporte') selected @endif>Pasaporte</option>
